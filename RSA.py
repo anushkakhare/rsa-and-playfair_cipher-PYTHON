@@ -1,9 +1,9 @@
 import sympy as sp
 
 #Public Key
-p=sp.randprime(30,100)
-q=sp.randprime(30,100)
-#First number in Publc Key
+p=sp.randprime(30,1000)
+q=sp.randprime(30,1000)
+#First number in Public Key
 n=p*q
 phi=(p-1)*(q-1)
 
@@ -27,11 +27,11 @@ for k in range(1,10):
 data=int(input("Enter number to encrypt:"))
 
 #Encryption
-encrypted=(data**e)%n
+encrypted= (data**e)%n
 print("\nEncrypted Message:",encrypted)
 
 #Decryption
-decrypted=int((encrypted**d)%n)
+decrypted=(encrypted**d)%n
 print("\nDecrypted Message:",decrypted)
 
 print("\nDetails:")
